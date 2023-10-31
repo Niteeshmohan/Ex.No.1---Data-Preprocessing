@@ -32,8 +32,9 @@ Normalizing the data
 Splitting the data into test and train
 
 ## PROGRAM:
-NAME: NITEESH M
-REF:212222230098
+NAME :NITEESH M
+
+REG.NO :212222230098
 ````
 import pandas as pd
 df=pd.read_csv("/content/Churn_Modelling.csv")
