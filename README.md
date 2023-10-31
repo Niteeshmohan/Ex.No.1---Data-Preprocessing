@@ -107,6 +107,7 @@ print(df1)
 ![a1](out5.png)
 ## X AND Y VALUES :
 ![a1](out6.png)
+## X_TEST AND Y_TEST VALUES :
 ![a1](out7.png)
 
 ## RESULT
