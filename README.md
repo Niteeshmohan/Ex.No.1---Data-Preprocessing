@@ -3,7 +3,8 @@
 
 To perform Data preprocessing in a data set downloaded from Kaggle
 
-##REQUIPMENTS REQUIRED:
+## REQUIPMENTS REQUIRED:
+
 Hardware – PCs
 Anaconda – Python 3.7 Installation / Google Colab /Jupiter Notebook
 
@@ -24,50 +25,89 @@ Another aspect is that the data set should be formatted in such a way that more 
 
 
 ## ALGORITHM:
+## Step 1:
 Importing the libraries
+## Step 2:
 Importing the dataset
+## Step 3:
 Taking care of missing data
+## Step 4:
 Encoding categorical data
+## Step 5:
 Normalizing the data
+## Step 5:
 Splitting the data into test and train
 
 ## PROGRAM:
-NAME :NITEESH M
 
-REG.NO :212222230098
-````
+DEVELOPED BY: NITEESH M
+REG NO: 212222230098
+```
 import pandas as pd
+
 df=pd.read_csv("/content/Churn_Modelling.csv")
+
 df.head()
+
 df.isnull().sum()
+
 df.drop(["RowNumber","Age","Gender","Geography","Surname"],inplace=True,axis=1)
+
 print(df)
+
 x=df.iloc[:,:-1].values
+
 y=df.iloc[:,-1].values
+
 print(x)
+
 print(y)
+
 from sklearn.preprocessing import MinMaxScaler
+
 scaler = MinMaxScaler()
+
 df1 = pd.DataFrame(scaler.fit_transform(df))
+
 print(df1)
+
 from sklearn.model_selection import train_test_split
+
 xtrain,ytrain,xtest,ytest=train_test_split(x,y,test_size=0.2,random_state=2)
+
 print(xtrain)
+
 print(len(xtrain))
+
 print(xtest)
+
 print(len(xtest))
+
 from sklearn.preprocessing import StandardScaler
+
 sc = StandardScaler()
+
 df1 = sc.fit_transform(df)
+
 print(df1)
-````
+```
 
 ## OUTPUT:
-
-![img](out.png)
-![img](out1.png)
-![img](out2.png)
-![img](out3.png)
+## df.head():
+![a1](out.png)
+## df.isnull().sum():
+![a1](out1.png)
+## df value:
+![a1](out2.png)
+## VALUES OF INPUT AND OUTPUT DATA ON VAR X AND Y:
+![a1](out3.png)
+## NORMALIZING DATA:
+![a1](out4.png)
+## X_TRAIN AND Y_TRAIN VALUES:
+![a1](out5.png)
+## X AND Y VALUES :
+![a1](out6.png)
+![a1](out7.png)
 
 ## RESULT
-Thus the above program for standardizing the given data was implemented successfully.
+Thus,the program to perform Data preprocessing in a data set downloaded from Kaggle is implemented successfully   .
